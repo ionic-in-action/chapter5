@@ -1,4 +1,19 @@
 <ion-view view-title="Currencies">
+  <ion-nav-buttons side="primary">
+    <button class="button" ng-click="state.reordering = !state.reordering">Reorder</button>
+  </ion-nav-buttons>
   <ion-content>
+    <ion-list show-reorder="state.reordering">
+      <ion-item class="item-toggle" ng-repeat="currency in currencies">
+        {{currency.code}} - {{currency.text}}
+        <label class="toggle toggle-balanced">
+        <input type="checkbox" ng-model="currency.selected">
+          <div class="track">
+            <div class="handle"></div>
+          </div>
+        </label>
+        <ion-reorder-button class="ion-navicon" on-reorder="move(currency, $fromIndex, $toIndex)"></ion-reorder-button>
+      </ion-item>
+    </ion-list>
   </ion-content>
 </ion-view>
