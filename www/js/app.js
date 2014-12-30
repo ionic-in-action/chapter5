@@ -1,4 +1,4 @@
-angular.module('App', ['ionic'])
+angular.module('App', ['ionic', 'highcharts-ng'])
 
 .config(function ($stateProvider, $urlRouterProvider) {
 
@@ -18,10 +18,11 @@ angular.module('App', ['ionic'])
       }
     })
     .state('tabs.history', {
-      url: '/history',
+      url: '/history?currency',
       views: {
         'history-tab': {
-          templateUrl: 'views/history/history.html'
+          templateUrl: 'views/history/history.html',
+          controller: 'HistoryController'
         }
       }
     })
