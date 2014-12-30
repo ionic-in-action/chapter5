@@ -1,12 +1,15 @@
 <ion-tabs class="tabs-icon-top tabs-positive">
 
-  <ion-tab title="Rates" icon-on="ion-social-bitcoin" icon-off="ion-social-bitcoin-outline">
+  <ion-tab title="Rates" icon-on="ion-social-bitcoin" icon-off="ion-social-bitcoin-outline" ui-sref="tabs.rates">
+    <ion-nav-view name="rates-tab"></ion-nav-view>
   </ion-tab>
 
-  <ion-tab title="History" icon-on="ion-ios-analytics" icon-off="ion-ios-analytics-outline">
+  <ion-tab title="History" icon-on="ion-ios-analytics" icon-off="ion-ios-analytics-outline" ui-sref="tabs.history">
+    <ion-nav-view name="history-tab"></ion-nav-view>
   </ion-tab>
 
-  <ion-tab title="Currencies" icon-on="ion-ios-cog" icon-off="ion-ios-cog-outline">
+  <ion-tab title="Currencies" icon-on="ion-ios-cog" icon-off="ion-ios-cog-outline" ui-sref="tabs.currencies">
+    <ion-nav-view name="currencies-tab"></ion-nav-view>
   </ion-tab>
 
 </ion-tabs>
