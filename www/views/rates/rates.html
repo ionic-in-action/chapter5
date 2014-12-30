@@ -1,5 +1,9 @@
 <ion-view view-title="Current Rates" hide-back-button="true">
+  <ion-nav-buttons side="primary">
+    <button class="button" ng-click="openHelp($event)">About</button>
+  </ion-nav-buttons>
   <ion-content>
+    <ion-refresher on-refresh="load()" pulling-text="Pull to Refresh"></ion-refresher>
     <ion-list>
       <ion-item ng-repeat="currency in currencies | filter:{selected:true}" ui-sref="tabs.detail({currency: currency.code})">
         {{currency.code}} - {{currency.text}}
