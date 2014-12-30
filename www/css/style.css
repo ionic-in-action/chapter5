@@ -1,0 +1,20 @@
+.item .price {
+  font-weight: bold;
+  font-size: 13px;
+  color: #fff;
+  position: absolute;
+  background: #666;
+  right: 15px;
+  height: 42px;
+  top: 5px;
+  width: 80px;
+  text-align: center;
+  padding: 6px;
+  line-height: 1.2em;
+}
+.item .price.positive {
+  background: #66cc33;
+}
+.item .price.negative {
+  background: #ef4e3a;
+}
