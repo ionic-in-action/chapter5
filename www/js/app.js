@@ -32,6 +32,15 @@ angular.module('App', ['ionic'])
           templateUrl: 'views/currencies/currencies.html'
         }
       }
+    })
+    .state('tabs.detail', {
+      url: '/detail/:currency',
+      views: {
+        'rates-tab': {
+          templateUrl: 'views/detail/detail.html',
+          controller: 'DetailController'
+        }
+      }
     });
 
   $urlRouterProvider.otherwise('/tabs/rates');

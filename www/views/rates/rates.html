@@ -1,7 +1,7 @@
-<ion-view view-title="Current Rates">
+<ion-view view-title="Current Rates" hide-back-button="true">
   <ion-content>
     <ion-list>
-      <ion-item ng-repeat="currency in currencies | filter:{selected:true}">
+      <ion-item ng-repeat="currency in currencies | filter:{selected:true}" ui-sref="tabs.detail({currency: currency.code})">
         {{currency.code}} - {{currency.text}}
         <span class="price" ng-if="currency.ticker.last == currency.ticker['24h_avg']">
           {{currency.ticker.last || '0.00'}}<br />0.00
