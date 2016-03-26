@@ -64,7 +64,7 @@ angular.module('App', ['ionic', 'highcharts-ng'])
     { code: 'AUD', text: 'Australian Dollar', selected: true },
     { code: 'BRL', text: 'Brazilian Real', selected: false },
     { code: 'CAD', text: 'Canadian Dollar', selected: true },
-    { code: 'CHF', text: 'Swiss Franc', selected: false },
+    // { code: 'CHF', text: 'Swiss Franc', selected: false }, Disabled CHF because the API no longer returns it
     { code: 'CNY', text: 'Chinese Yuan', selected: true},
     { code: 'EUR', text: 'Euro', selected: true },
     { code: 'GBP', text: 'British Pound Sterling', selected: true },
