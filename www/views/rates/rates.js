@@ -16,7 +16,7 @@ angular.module('App')
   });
 
   $scope.load = function () {
-    $http.get('https://api.bitcoinaverage.com/ticker/all').success(function (tickers) {
+    $http.get('https://apiv2.bitcoinaverage.com/ticker/all').success(function (tickers) {
       angular.forEach($scope.currencies, function (currency) {
         currency.ticker = tickers[currency.code];
         currency.ticker.timestamp = new Date(currency.ticker.timestamp);
