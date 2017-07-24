@@ -31,7 +31,7 @@ angular.module('App')
     series: []
   };
 
-  $http.get('https://api.bitcoinaverage.com/history/' + $scope.history.currency + '/per_hour_monthly_sliding_window.csv').success(function (prices) {
+  $http.get('https://apiv2.bitcoinaverage.com/indices/global/history/BTC' + $scope.history.currency + '?period=monthly&format=csv').success(function (prices) {
 
     prices = prices.split(/\n/);
     var series = {
